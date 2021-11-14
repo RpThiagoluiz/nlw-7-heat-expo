@@ -7,7 +7,7 @@ import { styles } from "./styles";
 export function SendMessage() {
   return (
     <View>
-      <Text>Text</Text>
+      <Text>SendMessage</Text>
     </View>
   );
 }
