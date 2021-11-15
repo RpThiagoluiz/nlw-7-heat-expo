@@ -6,6 +6,7 @@ import {
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
 import AppLoading from "expo-app-loading";
+import { AuthProvider } from "./src/contexts";
 import { Home } from "./src/screens/Home";
 
 // Lembra que existe um tempo para o loading das fonts.
@@ -24,9 +25,9 @@ export default function App() {
   }
 
   return (
-    <>
-      <StatusBar style="light" />
+    <AuthProvider>
+      <StatusBar style="light" translucent backgroundColor="transparent" />
       <Home />
-    </>
+    </AuthProvider>
   );
 }

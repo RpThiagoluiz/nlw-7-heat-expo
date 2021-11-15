@@ -4,11 +4,16 @@ module.exports = function (api) {
     presets: ["babel-preset-expo"],
     plugins: [
       "react-native-reanimated/plugin",
+      "module-resolver",
       [
-        "module-resolver",
+        "module:react-native-dotenv",
         {
-          root: ["./src"],
-          extensions: [".js", ".jsx", ".png", ".svg", ".json", ".html", ".pdf"],
+          moduleName: "@env",
+          path: ".env",
+          blacklist: null,
+          whitelist: null,
+          safe: true,
+          allowUndefined: true,
         },
       ],
     ],
